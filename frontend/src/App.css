@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3fdf6;
+}
+
+header {
+  background-color: #d1f6e3;
+  padding: 40px 0;
+  text-align: center;
+}
+
+section {
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.card h3 {
+  color: #0a8f4e;
+  margin-bottom: 8px;
+}
+
+.category-sidebar {
+  border: 1px solid #d2f5d4;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f1fff4;
+}

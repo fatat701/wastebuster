@@ -1,0 +1,104 @@
+/* === AUTH (LOGIN / SIGNUP) === */
+.auth-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2fff7;
+}
+.auth-form {
+  background: #fff;
+  padding: 32px 22px 22px 22px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #12bb5727;
+  max-width: 380px;
+  width: 96vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.auth-title {
+  color: #10b959;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-align: center;
+}
+.auth-desc {
+  color: #5d6366;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  text-align: center;
+}
+.auth-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  align-self: flex-start;
+}
+.auth-input {
+  width: 100%;
+  padding: 9px 12px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  border: 1.4px solid #c8eedd;
+  border-radius: 7px;
+  background: #f2fff7;
+  transition: border 0.2s;
+  outline: none;
+}
+.auth-input:focus {
+  border-color: #18c876;
+  background: #f8fffa;
+}
+.auth-btn {
+  margin-top: 8px;
+  width: 100%;
+  background: #12bb57;
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+.auth-btn:hover { background: #0ea74d; }
+.auth-error {
+  color: #cc1c1c;
+  font-size: 0.97rem;
+  font-weight: bold;
+  background: #ffeaea;
+  border-radius: 7px;
+  padding: 6px 0;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.auth-footer {
+  margin-top: 13px;
+  font-size: 0.97rem;
+  color: #333;
+  text-align: center;
+}
+.auth-footer a { color: #12bb57; font-weight: bold; text-decoration: none;}
+.auth-footer a:hover { text-decoration: underline; }
+.auth-radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 13px;
+}
+.auth-radio-label {
+  font-size: 0.97rem;
+  font-weight: 500;
+}
+@media (max-width: 700px) {
+  .auth-form { padding: 12px 3vw 10px 3vw; max-width: 96vw;}
+  .auth-title { font-size: 1.08rem;}
+  .auth-desc { font-size: 0.87rem;}
+  .auth-label, .auth-btn, .auth-footer { font-size: 0.93rem; }
+}

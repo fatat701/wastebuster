@@ -1,0 +1,106 @@
+/* Container général */
+.seller-dashboard {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Titre */
+.seller-dashboard h1, .seller-dashboard h2 {
+  color: #0b592a;
+}
+
+/* Formulaire d'ajout */
+.seller-dashboard form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.seller-dashboard form input[type="text"],
+.seller-dashboard form input[type="number"],
+.seller-dashboard form input[type="date"],
+.seller-dashboard form select {
+  flex: 1 1 150px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.seller-dashboard form input[type="number"] {
+  flex: 1 1 100px;
+}
+
+.seller-dashboard form label {
+  flex: 1 1 150px;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.seller-dashboard form label input[type="checkbox"] {
+  margin-left: 8px;
+  align-self: flex-start;
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+}
+
+.seller-dashboard form button {
+  flex: 1 1 100px;
+  height: 38px;
+  background-color: #12bb57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.seller-dashboard form button:hover {
+  background-color: #0e8b3a;
+}
+
+/* Liste des produits */
+.seller-dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.seller-dashboard li {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background-color: #f7fefa;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.seller-dashboard li img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.seller-dashboard li div strong {
+  font-size: 18px;
+  color: #0b592a;
+}
+
+.seller-dashboard li div p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #555;
+}

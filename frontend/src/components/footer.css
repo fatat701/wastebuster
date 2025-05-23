@@ -1,0 +1,111 @@
+.footer {
+  background: #e6fef2;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-size: 0.9rem; /* Base font size réduite */
+}
+
+.footer-block {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 18px 24px 12px 24px; /* Padding réduit */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Déjà aligné à gauche */
+}
+
+.footer-title {
+  font-size: 1.2rem; /* Taille réduite */
+  font-weight: 600;
+  color: #15b05c;
+  margin-bottom: 2px;
+  transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.footer-title:hover {
+  transform: translateX(3px); /* Effet de mouvement au survol */
+}
+
+.footer-desc {
+  font-size: 0.85rem; /* Taille réduite */
+  margin-bottom: 6px; /* Marge réduite */
+  max-width: 80%; /* Limite la largeur pour un meilleur aspect sur grands écrans */
+}
+
+.footer-links {
+  display: flex;
+  gap: 16px; /* Espace réduit */
+  margin: 6px 0 0 0; /* Marge réduite */
+  font-size: 0.85rem; /* Taille réduite */
+}
+
+.footer-link {
+  color: #19af60;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease; /* Animation plus fluide */
+  position: relative; /* Pour l'effet de soulignement dynamique */
+}
+
+.footer-link:hover {
+  color: #007f3a;
+  transform: translateX(2px); /* Léger mouvement au survol */
+}
+
+/* Effet de soulignement dynamique */
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  background-color: #007f3a;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+.footer-copy {
+  margin-top: 16px; /* Marge réduite */
+  font-size: 0.8rem; /* Taille réduite */
+  color: #19af60;
+  font-weight: 500;
+  opacity: 0.9; /* Légèrement plus discret */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-block {
+    padding: 14px 5vw 8px 5vw;
+  }
+
+  .footer-title {
+    font-size: 1.1rem;
+  }
+
+  .footer-desc {
+    font-size: 0.8rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-block {
+    padding: 12px 5vw 8px 5vw;
+  }
+
+  .footer-links {
+    flex-wrap: wrap; /* Permet aux liens de s'adapter sur plusieurs lignes si nécessaire */
+    gap: 12px 16px; /* Espace vertical et horizontal */
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+}
