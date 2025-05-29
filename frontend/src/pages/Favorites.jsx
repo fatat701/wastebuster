@@ -23,7 +23,7 @@ export default function Favorites() {
 
   useEffect(() => {
     if (!token) return;
-    fetch("http://localhost:5000/api/favorites", {
+    fetch("${process.env.REACT_APP_API_URL}/api/favorites", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => {
@@ -42,7 +42,7 @@ export default function Favorites() {
       return;
     }
     try {
-      const res = await fetch(`http://localhost:5000/api/favorites/${productId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/favorites/${productId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       });

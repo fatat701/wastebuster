@@ -22,7 +22,7 @@ function SellerDashboard() {
     const token = localStorage.getItem("token");
     if (!token) return;
     try {
-      const res = await fetch("http://localhost:5000/api/products/seller", {
+      const res = await fetch("${process.env.REACT_APP_API_URL}/api/products/seller", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -89,7 +89,7 @@ function SellerDashboard() {
     };
 
     try {
-      const res = await fetch("http://localhost:5000/api/products/seller", {
+      const res = await fetch("${process.env.REACT_APP_API_URL}/api/products/seller", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -130,7 +130,7 @@ function SellerDashboard() {
     };
 
     try {
-      const res = await fetch(`http://localhost:5000/api/products/seller/${editingProductId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/products/seller/${editingProductId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -157,7 +157,7 @@ function SellerDashboard() {
     if (!confirmDelete) return;
 
     try {
-      await fetch(`http://localhost:5000/api/products/seller/${id}`, {
+      await fetch(`${process.env.REACT_APP_API_URL}/api/products/seller/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

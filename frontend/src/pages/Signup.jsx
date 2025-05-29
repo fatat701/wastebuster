@@ -4,8 +4,8 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Auth.css"
 
-const SIGNUP_API_URL = "http://localhost:5000/api/users/signup"
-const LOGIN_API_URL = "http://localhost:5000/api/users/login"
+const SIGNUP_API_URL = "${process.env.REACT_APP_API_URL}/api/users/signup"
+const LOGIN_API_URL = "${process.env.REACT_APP_API_URL}/api/users/login"
 
 function Signup({ onSignup }) {
   const navigate = useNavigate()

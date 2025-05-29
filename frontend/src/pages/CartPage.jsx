@@ -35,7 +35,7 @@ export default function CartPage({ user }) {
       paymentMethod: paymentMethod,
     };
 
-    const res = await fetch("http://localhost:5000/api/orders/checkout", {
+    const res = await fetch("${process.env.REACT_APP_API_URL}/api/orders/checkout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

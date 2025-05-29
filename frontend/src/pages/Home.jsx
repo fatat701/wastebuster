@@ -163,7 +163,7 @@ export default function HomeContent() {
   // Load favorites for logged-in user
   useEffect(() => {
     if (token) {
-    fetch("http://localhost:5000/api/favorites", {
+    fetch("${process.env.REACT_APP_API_URL}/api/favorites", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -186,7 +186,7 @@ export default function HomeContent() {
 
   try {
     if (isFavorited) {
-      const res = await fetch(`http://localhost:5000/api/favorites/${productId}`, {
+      const res = await fetch(`${process.env.REACT_APP_API_URL}/api/favorites/${productId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -194,7 +194,7 @@ export default function HomeContent() {
       // Only update UI after backend success
       setFavorites(favorites.filter((id) => id !== productId));
     } else {
-      const res = await fetch("http://localhost:5000/api/favorites", {
+      const res = await fetch("${process.env.REACT_APP_API_URL}/api/favorites", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
