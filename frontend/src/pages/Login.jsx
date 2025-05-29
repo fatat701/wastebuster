@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Auth.css"
 
-const API_URL = "https://wastebuster.onrender.com/api/users/login";
+const API_URL = "http://localhost:5000/api/users/login"
 
 function Login({ onLogin }) {
   const [form, setForm] = useState({ email: "", password: "" })

@@ -8,14 +8,14 @@ export default function ProductDetails() {
   const token = localStorage.getItem("token");
 
   React.useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/api/products/${id}`)
+    fetch(`http://localhost:5000/api/products/${id}`)
       .then((res) => res.json())
       .then(setProduct);
   }, [id]);
 
   const addFavorite = () => {
     if (!token) return alert("Veuillez vous connecter");
-    fetch("${process.env.REACT_APP_API_URL}/api/favorites", {
+    fetch("http://localhost:5000/api/favorites", {
       method: "POST",
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${token}` },
       body: JSON.stringify({ product_id: product.id }),
